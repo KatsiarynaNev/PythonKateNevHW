@@ -4,21 +4,21 @@ Python features a dynamic type system and automatic memory management. It suppor
 Python interpreters are available for many operating systems. CPython, the reference implementation of Python, is open source software and has a community-based development model, as do nearly all of Python's other implementations. Python and CPython are managed by the non-profit Python Software Foundation. Привет из Харькова!
 """
 
-# Приведем текст к нижнему регистру и удалим знаки препинания и пробелы
+# Bring the text to lower case and remove punctuation and spaces
 cleaned_text = ''.join(char.lower() for char in text if char.isalpha() or char.isspace())
 
-# Подсчет частоты встречаемости букв
+# Counting the frequency of letter occurrence
 letter_count = {}
 for char in cleaned_text:
     if char.isalpha():
         letter_count[char] = letter_count.get(char, 0) + 1
 
-# Подсчет встречаемости слова 'Python'
+# Counting the occurrence of a word 'Python'
 python_count = cleaned_text.split().count('python')
 
-# Нахождение буквы с максимальной частотой
+# Finding the letter with the maximum frequency
 most_common_letter = max(letter_count, key=letter_count.get)
 
-# Вывод результатов
+# results
 print(f"Наиболее частая буква: {most_common_letter}, количество раз: {letter_count[most_common_letter]}")
 print(f"Количество встреч слова 'Python': {python_count}")
